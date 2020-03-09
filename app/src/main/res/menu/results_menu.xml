@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/deletePolls"
+        android:enabled="true"
+        android:title="Delete polls"/>
+    <item
+        android:id="@+id/deleteQuestions"
+        android:enabled="true"
+        android:title="Delete questions"/>
+    <item
+        android:id="@+id/deleteAnswers"
+        android:enabled="true"
+        android:title="Delete answers"/>
+</menu>

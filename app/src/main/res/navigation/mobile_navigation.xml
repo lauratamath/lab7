@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.labo5.views.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_answersFragment"
+            app:destination="@id/answersFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_aboutApp"
+        android:name="com.example.labo5.views.AboutFragment"
+        android:label="About App"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/answersFragment"
+        android:name="com.example.labo5.views.AnswersFragment"
+        android:label="Questions"
+        tools:layout="@layout/fragment_answers" >
+        <action
+            android:id="@+id/action_answersFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addQuestionFragment"
+        android:name="com.example.labo5.views.AddQuestionsFragment"
+        android:label="Add Questions"
+        tools:layout="@layout/fragment_add_questions" />
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.example.labo5.views.ResultsFragment"
+        android:label="Results"
+        tools:layout="@layout/fragment_results" >
+        <action
+            android:id="@+id/action_resultsFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_resultsFragment_to_seeResultsFragment"
+            app:destination="@id/seeResultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seeResultsFragment"
+        android:name="com.example.labo5.views.SeeResultsFragment"
+        android:label="SeeResultsFragment"
+        tools:layout="@layout/fragment_see_results" >
+    </fragment>
+</navigation>
